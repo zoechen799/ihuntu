@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration {
                         $table->text('phone')->nullable();
                         $table->integer('cnresume_id')->nullable();
                         $table->integer('enresume_id')->nullable();
+                        $table->boolean('isadmin')->default(false);
 			$table->rememberToken();
 			$table->timestamps();
 		});

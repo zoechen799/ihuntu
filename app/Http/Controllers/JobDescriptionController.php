@@ -1,17 +1,20 @@
-<?php namespace App\Http\Controllers\Admin;
+<?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-
+use App\JobDescription;
+use App\JobCategory;
 use App\Company;
+use App\UserVisit;
+use App\UserLike;
 
-class AdminHomeController extends Controller {
-        public function __construct()
-        {
-            $this->middleware('auth');
-        }
+
+use Auth;
+
+class JobDescriptionController extends Controller {
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -19,7 +22,7 @@ class AdminHomeController extends Controller {
 	 */
 	public function index()
 	{
-            return view('admin.AdminHome')->withCmps(Company::all());
+		//
 	}
 
 	/**
@@ -50,7 +53,15 @@ class AdminHomeController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+            $user = Auth::user();
+            if($user != null && $user->id != null){
+                UserVisit::userVisitJobDescription($user->id, $id);
+            }
+            $visited = UserVisit::visitCount($id);
+            $like =  UserLike::likeCount($id);
+            
+            return view('jobdescriptions.detail')->with('jd', JobDescription::find($id))
+                ->with('visited', $visited)->with('like', $like);
 	}
 
 	/**

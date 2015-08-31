@@ -13,15 +13,22 @@
                     </div>
                     <div class="jd-desc">
                         <span class="jd-price">
-                            {{$item->minsalary}} - {{$item->maxsalary}}
+                            年薪: {{$item->minsalary}} - {{$item->maxsalary}}万
                         </span>
-                        <small class="text-muted">{{$item->belongsToCategory->name}}</small>
-                        <a href="#" class="jd-name">{{$item->title}}</a>
+                        <small class="jd-cate badge badge-info">{{$item->belongsToCategory->name}}</small>
+                        <span  class="jd-name">{{$item->title}}</span>
                         <div class="small m-t-xs">
-                         
+                         <?php
+                            $jdescription = $item->responsibility;
+                            if(mb_strlen($jdescription, 'UTF-8') > 100){
+                                $jdescription = mb_strimwidth($jdescription, 0, 100);
+                                $jdescription = $jdescription . '...';
+                            }
+                         ?>
+                            {{$jdescription}}
                         </div>
                         <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">详情 <i class="fa fa-long-arrow-right"></i> </a>
+                            <a href="{{ URL('jds/'.$item->id) }}" class="btn btn-xs btn-outline btn-primary">详情 <i class="fa fa-long-arrow-right"></i> </a>
                         </div>
                     </div>
                 </div>

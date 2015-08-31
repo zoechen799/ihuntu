@@ -67,7 +67,9 @@
         <div class="footer">
 		<div class="wrapper">
 		    <a href="#" target="_blank" rel="nofollow">帮助中心</a>
-                    <a href="#" target="_blank" rel="nofollow">联系我们：400-605-9900</a>
+                    <a href="#" class="fa fa-wechat" data-toggle="modal" data-target="#wc_modal">敬请关注微信公众号ihuntu</a>
+                    
+                    <a href="#" target="mailto: tina@ihuntu.com" rel="nofollow">联系我们：tina@ihuntu.com</a>
                     <div class="copyright">
                             <span>©2015 猎来</span>
                             <a target="_blank" href="#" rel="nofollow">沪ICP备15014152号</a>
@@ -75,6 +77,22 @@
                     </div>
 		</div>
 	</div>
+        
+        <div class="modal inmodal fade" id="wc_modal" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">请用微信扫描我们的二维码</h4>
+                    </div>
+                    <div class="modal-body">
+                       <img class="alignnone size-medium wp-image-134" 
+                            src="img/wc_public_qrcode.jpg"  width="240" height="240">
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         
         
