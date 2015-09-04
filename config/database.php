@@ -54,10 +54,10 @@ return [
 
 		'mysql' => [
 			'driver'    => 'mysql',
-			'host'      => env('DB_HOST', 'localhost'),
-			'database'  => env('DB_DATABASE', 'larevel'),
-			'username'  => env('DB_USERNAME', 'ihuntu'),
-			'password'  => env('DB_PASSWORD', 'Initial0'),
+			'host'      => env('MYSQL_PORT_3306_TCP_ADDR', 'localhost'),
+			'database'  => env('MYSQL_INSTANCE_NAME', 'laravel'),
+			'username'  => env('MYSQL_USERNAME', 'ihuntu'),
+			'password'  => env('MYSQL_PASSWORD', 'Initial0'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => 'lv_',
