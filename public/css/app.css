@@ -42,9 +42,30 @@
     color: #5e5e5e;
 }
 
+/* carousel start */  
+.img-carousel{
+    width:100%;
+    height:100%;
+}
+.carousel-caption-hidden p{
+    display: none;
+}
+.carousel-caption p{
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+.campaign-title{
+    margin-top: 15px;
+    text-align: center;
+}
+/* carousel end */
+
+/* jd grid start*/
 .jd-box{
     padding: 0;
     border: 1px solid #e7eaec;
+    height: 385px;
 }
 .jd-company{
     text-align: center;
@@ -52,10 +73,16 @@
     background-color: #f8f8f9;
     color: #bebec3;
     font-weight: 600;
+    font-size: 14px;
 }
 .jd-desc{
     padding: 20px;
     position: relative;
+}
+.jd-link-detail{
+    position: absolute;
+    bottom: 20px;
+    left: 54px;
 }
 .jd-price{
     font-size: 14px;

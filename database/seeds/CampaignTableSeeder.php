@@ -11,7 +11,7 @@ class CampaignTableSeeder extends Seeder {
 
     Campaign::create([
        'title' => 'wifi万能钥匙热招中',
-       'imageurl'=>'upload/2015/08/2wifi.png',
+       'imageurl'=>'upload/2015/08/wifikey.jpg',
        'active' => true,
        'link'=>'#'
     ]);

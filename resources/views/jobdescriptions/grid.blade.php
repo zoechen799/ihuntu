@@ -27,14 +27,14 @@
                          ?>
                             {{$jdescription}}
                         </div>
-                        <div class="m-t text-righ">
-                            <a href="{{ URL('jds/'.$item->id) }}" class="btn btn-xs btn-outline btn-primary">详情 <i class="fa fa-long-arrow-right"></i> </a>
-                        </div>
+                    </div>
+                    <div class="m-t text-righ jd-link-detail">
+                        <a href="{{ URL('jds/'.$item->id) }}" class="btn btn-xs btn-outline btn-primary">详情 <i class="fa fa-long-arrow-right"></i> </a>
                     </div>
                 </div>
             </div>
         </div>
-        @if($index % 2 == 0)
+        @if($index % 2 == 1)
         </div>
         @endif
         <?php $index++; ?>

@@ -11,9 +11,6 @@
                     </div>
                 </div>
 		<div class="col-md-9">
-                    <div class="panel panel-default">
-                        @include('campaigns.carousel', ['campaigns' => $campaigns])
-                    </div>
                     <div class="panel">
                         <div class="row">
                             <div class="col-md-9">
@@ -23,10 +20,14 @@
                             <button type="button" class="col-md-3 btn btn-w-m btn-primary btn-search">搜索</button>
                         </div>
                     </div>
+                    
+                    <div class="panel">
+                        <h3>最新动态</h3>
+                       @include('campaigns.carousel', ['campaigns' => $campaigns])
+                    </div>
+                    
                     <div class='panel'>
-                        <div class='panel-header'>
-                            热门工作
-                        </div>
+                        <h3>热门工作</h3>
                         <div clas='panel-body'>
                             @include('jobdescriptions.grid', ['jds' => $jds])
                         </div>
