@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\JobCategory;
-use App\Campaign;
+use App\JdGroup;
 use App\Configure;
 use App\JobDescription;
 
@@ -38,7 +38,7 @@ class HomeController extends Controller {
                 $carouselSize = Configure::where('key', 'carouselsize')->first()->intvalue;
                 
 		return view('home')->with('jobcategories', JobCategory::all())
-                ->with('campaigns', Campaign::where('active', true)->orderBy('updated_at', 'desc')->take($carouselSize)->get())
+                ->with('jdgroups', JdGroup::where('active', true)->orderBy('updated_at', 'desc')->take($carouselSize)->get())
                 ->with('jds', JobDescription::all());
 	}
 

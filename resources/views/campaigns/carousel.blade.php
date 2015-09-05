@@ -5,14 +5,14 @@
                 <div class="carousel slide" id="carousel2">
                     <ol class="carousel-indicators">
                         <?php $index=0; ?>
-                        @foreach ($campaigns as $item)
+                        @foreach ($jdgroups as $item)
                             <li data-slide-to="{{$index}}" data-target="#carousel2"  class="{{$index ==0 ? 'active': ''}}"></li>
                             <?php $index++; ?>          
                         @endforeach
                     </ol>
                     <div class="carousel-inner">
                         <?php $index=0; ?>
-                        @foreach ($campaigns as $item)
+                        @foreach ($jdgroups as $item)
                             <div class="carousel-item item {{$index ==0 ? 'active': ''}}">
                                 <img alt="image"  class="img-carousel" src="{{$item->imageurl}}">
                                 <div class="carousel-caption-hidden">

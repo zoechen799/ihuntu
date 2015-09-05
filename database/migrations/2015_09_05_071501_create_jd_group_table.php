@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCampaignsTable extends Migration {
+class CreateJdGroupTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateCampaignsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('campaigns', function(Blueprint $table)
+		Schema::create('jd_groups', function(Blueprint $table)
 		{
 			$table->increments('id');
                         $table->string('imageurl');
@@ -30,7 +30,7 @@ class CreateCampaignsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('campaigns');
+		Schema::drop('jd_groups');
 	}
 
 }

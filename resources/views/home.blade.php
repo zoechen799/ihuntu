@@ -23,7 +23,7 @@
                     
                     <div class="panel">
                         <h3>最新动态</h3>
-                       @include('campaigns.carousel', ['campaigns' => $campaigns])
+                       @include('campaigns.carousel', ['jdgroups' => $jdgroups])
                     </div>
                     
                     <div class='panel'>
