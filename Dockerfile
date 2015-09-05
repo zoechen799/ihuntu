@@ -49,5 +49,5 @@ RUN composer install \
     && chmod -R 0777 /app/storage
 
 RUN php artisan migrate \
-    && composer dump-autoload
+    && composer dump-autoload \
     && php artisan db:seed
